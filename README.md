@@ -5,24 +5,36 @@ Request Amarel cluster access via the link below:
 https://oarc.rutgers.edu/amarel-cluster-access-request/
 
 ## Login
-Open a terminal application and log in to the server using your NetID and password.
-
+Open a terminal application, and log in to the server with your NetID and password.
 ```bash
-$ ssh <NetID>@amarel.rutgers.edu    # replace <NetID> with your own
+$ ssh <NetID>@amarel.rutgers.edu  # replace <NetID> with your own
 ```
 
 ## Data transfer
-upload data to the server
+- Upload data to the server
 ```bash
 scp -r <local directory> <NetID>@amarel.rutgers.edu:<hpc directory>
 ```
 
-download data from the server
+- Download data from the server
 ```bash
 scp -r <NetID>@amarel.rutgers.edu:<hpc directory> <local directory>
 ```
 
 ## Setup Conda environment
-Follow the Conda section in the Amarel cluster user guide:  
+See the Conda section in the Amarel cluster user guide:  
 https://sites.google.com/view/cluster-user-guide/amarel/applications#h.rb853r90bnus
 
+## Launch Jupyter Notebook on the cluster
+youtube tutorial: https://www.youtube.com/watch?v=qvGs35QX6Ss
+- Step 1: After logging into the server, activate the Conda environment.
+- Step 2: Launch Jupyter Notebook using the following command:
+```bash
+jupyter notebook --no-browser --ip=127.0.0.1 --port=8890
+```
+- Step 3: Open a new terminal, type the following command, and then enter your password.
+```bash
+ssh -N -f -L localhost:8890:localhost:8890 <NetID>@amarel.rutgers.edu
+```
+- Step 4: Copy the link from the terminal that launched Jupyter Notebook.
+- Step 5: Paste the link into a browser.
