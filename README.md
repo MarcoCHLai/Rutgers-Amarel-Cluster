@@ -1,1 +1,1 @@
-# Rutgers-Ammarel-Cluster
+# Rutgers-Amarel-Cluster
