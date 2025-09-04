@@ -38,3 +38,7 @@ ssh -N -f -L localhost:8890:localhost:8890 <NetID>@amarel.rutgers.edu
 ```
 - Step 4: Copy the link from the terminal that launched Jupyter Notebook.
 - Step 5: Paste the link into a browser.
+
+```bash
+salloc -c 1 --mem=4G --time=1:00:00
+```
