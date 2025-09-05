@@ -61,11 +61,27 @@ ssh -N -f -L localhost:8890:localhost:8890 <NetID>@amarel.rutgers.edu
 <br><br>
 
 ## Github basics
-### cloning a repository
+- Cone a repository
 ```bash
 git clone <repository_url>
 ```
 <br>
 
+- The git status shows the current state of your Git working directory and staging area.
+```bash
+git status
+```
+<br>
 
+- The git add command adds new or changed files in your working directory to the Git staging area.
+```bash
+git add <file_name>
+git commit -m "commit message about the command line"
+```
+<br>
 
+- The git push command is used to upload local repository content to a remote repository. 
+```bash
+git push <remote_name> <branch_name>
+```
+<br>
