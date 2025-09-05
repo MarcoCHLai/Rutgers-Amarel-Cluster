@@ -23,22 +23,40 @@ scp -r <NetID>@amarel.rutgers.edu:<hpc directory> <local directory>
 
 ## Setup Conda environment
 See the Conda section in the Amarel cluster user guide:  
-https://sites.google.com/view/cluster-user-guide/amarel/applications#h.rb853r90bnus
+https://sites.google.com/view/cluster-user-guide/amarel/applications#h.rb853r90bnus  
+<br>
 
 ## Launch Jupyter Notebook on the cluster
-youtube tutorial: https://www.youtube.com/watch?v=qvGs35QX6Ss
-- Step 1: After logging into the server, activate the Conda environment.
-- Step 2: Launch Jupyter Notebook using the following command:
+Youtube tutorial: https://www.youtube.com/watch?v=qvGs35QX6Ss  
+<br>
+
+- After logging into the server, request a compute node.
+```bash
+srun --cpus-per-task=1 --mem=4GB --time=02:00:00 --pty /bin/bash
+```
+The example above requests a node with 1 CPU and 4 GB of RAM for 2 hours.  
+<br>
+
+- Activate the Conda environment.
+```bash
+conda activate <environmant name>
+```
+<br>
+
+- Launch Jupyter Notebook using the following command:
 ```bash
 jupyter notebook --no-browser --ip=127.0.0.1 --port=8890
 ```
-- Step 3: Open a new terminal, type the following command, and then enter your password.
+<br>
+
+- Open a new terminal, type the following command, and then enter your password.
 ```bash
 ssh -N -f -L localhost:8890:localhost:8890 <NetID>@amarel.rutgers.edu
 ```
-- Step 4: Copy the link from the terminal that launched Jupyter Notebook.
-- Step 5: Paste the link into a browser.
+<br>
 
-```bash
-salloc -c 1 --mem=4G --time=1:00:00
-```
+- Copy the link from the terminal that launched Jupyter Notebook.
+<br>
+
+- Paste the link into a browser.
+<br>
