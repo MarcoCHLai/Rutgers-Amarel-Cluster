@@ -53,10 +53,10 @@ jupyter notebook --no-browser --ip=127.0.0.1 --port=8890
 ```bash
 ssh -N -f -L localhost:8890:localhost:8890 <NetID>@amarel.rutgers.edu
 ```
+<img alt="terminal_screenshot1" src="https://github.com/user-attachments/assets/11d4cc74-6f9b-4760-9429-fe98062da102" />  
+<br><br>
+
+- Copy the link from the terminal where Jupyter Notebook was launched, and paste the link into a browser.
+<img alt="terminal_screenshot2" src="https://github.com/user-attachments/assets/ee3323d0-7df8-46b2-a051-969b3c631e92" />  
 <br>
 
-- Copy the link from the terminal that launched Jupyter Notebook.
-<br>
-
-- Paste the link into a browser.
-<br>
