@@ -68,7 +68,7 @@ ssh -N -f -L 8889:<hostname>:8889 <NetID>@amarel.rutgers.edu
 <img width="900" alt="cluster_jupyter03" src="https://github.com/user-attachments/assets/cc4ebded-9b45-482b-b42d-c082ba451ed1" />
 
 ## Github basics
-- Cone a repository
+- Clone a repository
 ```bash
 git clone <repository_url>
 ```
