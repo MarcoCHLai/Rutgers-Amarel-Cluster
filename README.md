@@ -74,6 +74,13 @@ git clone <repository_url>
 ```
 <br>
 
+- The git config --global command is used to set configuration options that apply to all Git repositories for the current user on a given system.
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+```
+<br>
+
 - The git status shows the current state of your Git working directory and staging area.
 ```bash
 git status
@@ -83,7 +90,7 @@ git status
 - The git add command adds new or changed files in your working directory to the Git staging area.
 ```bash
 git add <file_name>
-git commit -m "commit message about the command line"
+git commit -m "commit message"
 ```
 <br>
 
