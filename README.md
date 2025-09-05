@@ -13,12 +13,12 @@ $ ssh <NetID>@amarel.rutgers.edu  # replace <NetID> with your own
 ## Data transfer
 - Upload data to the server
 ```bash
-scp -r <local directory> <NetID>@amarel.rutgers.edu:<hpc directory>
+scp -r <local_path> <NetID>@amarel.rutgers.edu:<hpc_path>
 ```
 
 - Download data from the server
 ```bash
-scp -r <NetID>@amarel.rutgers.edu:<hpc directory> <local directory>
+scp -r <NetID>@amarel.rutgers.edu:<hpc_path> <local_path>
 ```
 
 ## Setup Conda environment
@@ -58,5 +58,14 @@ ssh -N -f -L localhost:8890:localhost:8890 <NetID>@amarel.rutgers.edu
 
 - Copy the link from the terminal where Jupyter Notebook was launched, and paste the link into a browser.
 <img alt="terminal_screenshot2" src="https://github.com/user-attachments/assets/ee3323d0-7df8-46b2-a051-969b3c631e92" />  
+<br><br>
+
+## Github basics
+### cloning a repository
+```bash
+git clone <repository_url>
+```
 <br>
+
+
 
